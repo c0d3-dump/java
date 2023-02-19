@@ -5,23 +5,24 @@ import java.time.LocalDateTime;
 import java.time.Month;
 
 public class Gigasecond {
-  // public static void main(String[] args) {
-  //   Gigasecond gigaSecond = new Gigasecond(LocalDate.of(1977, Month.JUNE, 13));
-  //   LocalDateTime out = gigaSecond.getDateTime();
-  // }
+  public static void main(String[] args) {
+    Gigasecond gigaSecond = new Gigasecond(LocalDate.of(1977, Month.JUNE, 13));
+    LocalDateTime out = gigaSecond.getDateTime();
 
-  LocalDate momentDate;
-  LocalDateTime momentDateTime;
+    assert (out == LocalDateTime.of(2043, Month.JANUARY, 1, 1, 46, 40));
+  }
+
+  private LocalDateTime moment;
 
   public Gigasecond(LocalDate moment) {
-    momentDate = moment;
+    this.moment = moment.atTime(0, 0);
   }
 
   public Gigasecond(LocalDateTime moment) {
-    momentDateTime = moment;
+    this.moment = moment;
   }
 
   public LocalDateTime getDateTime() {
-    throw new UnsupportedOperationException("Delete this statement and write your own implementation.");
+    return moment.plusSeconds((long) Math.pow(10, 9));
   }
 }
