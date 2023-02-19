@@ -1,4 +1,4 @@
-package exercism.exercises;
+package exercism;
 
 import java.util.HashMap;
 import java.util.Map;

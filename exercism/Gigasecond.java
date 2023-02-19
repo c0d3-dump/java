@@ -1,4 +1,4 @@
-package exercism.exercises;
+package exercism;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

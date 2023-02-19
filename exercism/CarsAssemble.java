@@ -1,4 +1,4 @@
-package exercism.exercises;
+package exercism;
 
 public class CarsAssemble {
 
