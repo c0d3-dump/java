@@ -1,7 +1,5 @@
 package exercism;
 
-import java.util.Map;
-
 public class ScrabbleScore {
   public static void main(String[] args) {
 
@@ -16,8 +14,7 @@ class Scrabble {
     this.word = word;
   }
 
-  int getValue(int i) {
-    char c = Character.toChars(i)[0];
+  int getValue(char c) {
     switch (c) {
       case 'A', 'E', 'I', 'O', 'U', 'L', 'N', 'R', 'S', 'T':
         return 1;
@@ -39,7 +36,7 @@ class Scrabble {
   }
 
   int getScore() {
-    return word.toUpperCase().chars().map(i -> getValue(i)).sum();
+    return word.toUpperCase().chars().map(i -> getValue((char) i)).sum();
   }
 
 }
