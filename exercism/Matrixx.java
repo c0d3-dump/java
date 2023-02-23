@@ -2,11 +2,11 @@ package exercism;
 
 import java.util.Arrays;
 
-public class Matrix {
+public class Matrixx {
 
   private int[][] list;
 
-  Matrix(String matrixAsString) {
+  Matrixx(String matrixAsString) {
     list = Arrays.stream(matrixAsString.split("\n"))
         .map(i -> Arrays.stream(i.split(" ")).mapToInt(Integer::parseInt).toArray())
         .toArray(int[][]::new);
