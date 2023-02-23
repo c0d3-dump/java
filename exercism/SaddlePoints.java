@@ -8,7 +8,10 @@ import java.util.Set;
 
 public class SaddlePoints {
   public static void main(String[] args) {
-    Matrix matrix = new Matrix(new ArrayList<>());
+    Matrix matrix = new Matrix(Arrays.asList(
+        Arrays.asList(9, 8, 7),
+        Arrays.asList(5, 3, 2),
+        Arrays.asList(6, 6, 7)));
 
     System.out.println(matrix.getSaddlePoints().toString());
   }
