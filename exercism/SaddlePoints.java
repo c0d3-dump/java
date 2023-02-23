@@ -26,16 +26,19 @@ class Matrix {
   }
 
   Set<MatrixCoordinate> getSaddlePoints() {
-    if (values.size() <= 0)
+    int rowLen = values.size();
+    if (rowLen <= 0)
       return Set.of();
 
-    Set<MatrixCoordinate> out = new HashSet<>();
-    int[][] temp = new int[values.size()][values.get(0).size()];
+    int colLen = values.get(0).size();
 
-    for (int i = 0; i < values.size(); i++) {
+    Set<MatrixCoordinate> out = new HashSet<>();
+    int[][] temp = new int[rowLen][colLen];
+
+    for (int i = 0; i < rowLen; i++) {
       List<Integer> tempList1 = new ArrayList<>();
       int rowMax = 0;
-      for (int j = 0; j < values.get(i).size(); j++) {
+      for (int j = 0; j < colLen; j++) {
         int val = values.get(i).get(j);
         if (val > rowMax) {
           tempList1.clear();
@@ -51,10 +54,10 @@ class Matrix {
       }
     }
 
-    for (int i = 0; i < values.get(0).size(); i++) {
+    for (int i = 0; i < colLen; i++) {
       List<Integer> tempList2 = new ArrayList<>();
       int colMin = 99;
-      for (int j = 0; j < values.size(); j++) {
+      for (int j = 0; j < rowLen; j++) {
         int val = values.get(j).get(i);
         if (val < colMin) {
           tempList2.clear();
