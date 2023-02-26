@@ -1,8 +1,5 @@
 package exercism;
 
-import java.util.HashSet;
-import java.util.Set;
-
 public class RobotName {
   public static void main(String[] args) {
     Robot r = new Robot();
